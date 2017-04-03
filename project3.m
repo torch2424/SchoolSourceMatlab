@@ -7,6 +7,8 @@
 % This function simulates 
 % the density function of theta, 
 % and the density function of the range determined from theta
+% Deterministic Range Formula: R = V^2 / g sin(2[theta])
+Aaron@  vR.QJcGr\e;SC0yf
 function project3
 
 % Introduce the program to the user
