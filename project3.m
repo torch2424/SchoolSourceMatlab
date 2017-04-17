@@ -28,13 +28,13 @@ v = 10; % Meters per second
 
 % -----------------------------------------
 % Number of random numbers between the lower and upper bounds
-N = 1e8;
+N = 1e5;
 % The random numbers over the support
 theta = (lowerBound - upperBound) * rand(1, N) + upperBound;
 % plug for R of theta into d.
-d = 2 * ((v^2)/g) * sin(theta) * cos(theta);
+d = 2 * ((v^2)/g) * sin(theta) .* cos(theta);
 % The partition between upper and lower bounds
-partition = 1e5;
+partition = 1e3;
 % ------------------------------------------
 
 % Find our partitions and R.V
