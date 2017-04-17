@@ -30,9 +30,8 @@ v = 10; % Meters per second
 % Number of random numbers between the lower and upper bounds
 N = 1e8;
 % The random numbers over the support
-theta = (lowerBound - upperBound) * rand(1, N) + upperBound;
-% plug for R of theta into d.
-d = 2 * ((v^2)/g) * sin(theta) * cos(theta);
+% plug for R of theta.
+d = (lowerBound - upperBound) * rand(1, N) + upperBound;
 % The partition between upper and lower bounds
 partition = 1e5;
 % ------------------------------------------
