@@ -30,6 +30,9 @@ v = 10; % Meters per second
 % Number of random numbers between the lower and upper bounds
 N = 1e5;
 % The random numbers over the support
+% Uncomment this d = line, and comment the other d = line to get the
+% initial angle
+% d = (lowerBound - upperBound) * rand(1, N) + upperBound;
 theta = (lowerBound - upperBound) * rand(1, N) + upperBound;
 % plug for R of theta into d.
 d = 2 * ((v^2)/g) * sin(theta) .* cos(theta);
