@@ -28,5 +28,13 @@ function classexamplefinalcode
     % Actually, can use corr2.
     r = corr2(c, w)
     
+    tv = r * sqrt((7 - 2) / (1 - r^2))
+    
+    % Plot our matricies
+    scatter(c,w)
+    
+    % Plot our regression
+    plotregression(c,w)
+    
 end
 
