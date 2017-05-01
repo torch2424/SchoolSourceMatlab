@@ -5,7 +5,7 @@
 % Hypothesis Testing
 % ---------------------------------------------------------------------
 % _____________________________________________________________________
-% Below is the code for a binomial distribution wit n = 18, p = 0.5,
+% Below is the code for a binomial distribution with n = 18, p = 0.5,
 % it will produce a plot of the distribution
 function project4
 
@@ -22,7 +22,7 @@ function project4
     
     % Trials to run
     for x = 0:18
-        % Get our binomail PDF
+        % Get our binomial PDF
         % binopdf (x,n,p)
         prob(x + 1) = binopdf(x, n, p);   
     end
@@ -33,6 +33,9 @@ function project4
     % Build Our Graph
     figure(1);
     bar(prob);
+    xlabel('Number of trials');
+    ylabel('probability');
+    title('Binomial with p = 0.5');
     
     % ---------------------------------------------------------------------
     % _____________________________________________________________________
@@ -79,7 +82,7 @@ function project4
     
     % Trials to run
     for x = 0:18
-        % Get our binomail PDF
+        % Get our binomial PDF
         % binopdf (x,n,p)
         prob(x + 1) = binopdf(x, n, p);   
     end
@@ -90,6 +93,9 @@ function project4
     % Build Our Graph
     figure(2);
     bar(prob);
+    xlabel('Number of trials');
+    ylabel('probability');
+    title('Binomial with p = 0.9');
     
     % ---------------------------------------------------------------------
     % _____________________________________________________________________
@@ -112,6 +118,15 @@ function project4
         for x = 0:12
             prob(x + 1) = binopdf(x,n,p(i));
         end
+        
+        beta(i) = 1 - sum(prob);
     end
+    
+    % Build Our Graph
+    figure(3);
+    plot(beta);
+    xlabel('Probabilities of surperior system.');
+    ylabel('1 - beta probabilities');
+    title('Power of the test.');
 end
 
