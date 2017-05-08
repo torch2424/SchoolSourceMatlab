@@ -26,15 +26,15 @@ function classexamplefinalcode
     % d = sqrt((7*sum(csquare) - sum(c)^2)(7*sum(wsquare) - sum(w)^2));
     
     % Actually, can use corr2.
-    r = corr2(c, w)
+    r = corr2(c, w);
     
-    tv = r * sqrt((7 - 2) / (1 - r^2))
+    tv = r * sqrt((7 - 2) / (1 - r^2));
     
     % Plot our matricies
-    scatter(c,w)
+    scatter(c,w);
     
     % Plot our regression
-    plotregression(c,w)
+    plotregression(c,w);
     
 end
 
