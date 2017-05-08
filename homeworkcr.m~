@@ -177,7 +177,6 @@ out = a + b*60;
 plot(60,out,'r*')
 
 % Display the answer
-display('For 60 fires, the number of acres burned would be:');
-out
+display('For 60 fires, the number of acres burned would be:')
 end
 
